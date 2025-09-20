@@ -217,7 +217,7 @@ This project is licensed under the AGPL-3.0 License - see the [LICENSE](LICENSE)
 
 **Made with ❤️ by [@seojaeohcode](https://github.com/seojaeohcode)**
 
-*Last updated: September 20, 2025*
+*Last updated: January 20, 2025*
 
 [⭐ Star this repo](https://github.com/seojaeohcode/spec-scope) | [🐛 Report Bug](https://github.com/seojaeohcode/spec-scope/issues) | [💡 Request Feature](https://github.com/seojaeohcode/spec-scope/issues)
 
