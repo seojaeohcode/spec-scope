@@ -1,13 +1,123 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Engineering HUD Enhancements */
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor;
+  }
+  
+  .text-glow-cyan {
+    text-shadow: 
+      0 0 2px #00ffff,
+      0 0 4px #00ffff;
+  }
+  
+  .text-glow-green {
+    text-shadow: 
+      0 0 2px #00ff00;
+  }
+  
+  .border-glow {
+    box-shadow: 
+      0 0 3px rgba(0, 255, 255, 0.2);
+  }
+  
+  .border-glow-strong {
+    box-shadow: 
+      0 0 4px rgba(0, 255, 255, 0.3),
+      0 0 8px rgba(0, 255, 255, 0.2);
+  }
+  
+  .bg-grid {
+    background-image: 
+      linear-gradient(rgba(0, 255, 255, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .bg-grid-glow {
+    background-image: 
+      linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .neon-pulse {
+    animation: neon-pulse 2s ease-in-out infinite alternate;
+  }
+  
+  .neon-flicker {
+    animation: neon-flicker 0.15s infinite linear;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Custom scrollbar for engineering theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ffff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0080ff;
+}
+
+/* Holographic effect animation */
+@keyframes hologram {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes neon-pulse {
+  0% {
+    text-shadow: 
+      0 0 2px currentColor,
+      0 0 4px currentColor;
+  }
+  100% {
+    text-shadow: 
+      0 0 1px currentColor,
+      0 0 2px currentColor,
+      0 0 3px currentColor;
+  }
+}
+
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+  25% { opacity: 0.9; }
+  75% { opacity: 0.7; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 3px rgba(0, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 4px rgba(0, 255, 255, 0.3),
+      0 0 8px rgba(0, 255, 255, 0.2);
+  }
+}
+
+.hologram-effect {
+  animation: hologram 3s ease-in-out infinite;
+}
+
+.glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
 }
