@@ -37,7 +37,7 @@ jobs:
           CI: false
 
       - name: Upload build artifacts
-        uses: actions/upload-pages-artifacts@v3
+        uses: actions/upload-pages-artifacts@v2
         with:
           path: './build'
 
