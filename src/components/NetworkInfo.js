@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wifi, Globe, Signal, Download } from 'lucide-react';
+import { Wifi, Globe, Download } from 'lucide-react';
 
 const NetworkInfo = ({ data }) => {
   if (!data) return null;

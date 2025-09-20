@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Camera, Download, Share2, FileText } from 'lucide-react';
+import { Camera, Share2, FileText } from 'lucide-react';
 
 const ExportControls = () => {
   const [isExporting, setIsExporting] = useState(false);
