@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seojaeohcode.github.io/spec-scope/sitemap.xml
